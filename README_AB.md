@@ -35,11 +35,30 @@ Passo 1 - Copie o path da aplicação junto a pasta `dist`:
 ```
 /home/lucas/Documentos/IFPB/p6_2025.1/gcsi_tsi/cafeteria-web/dist
 ```
-Passo 2 - Abra a pasta `**etc/nginx/site-available**` e crie uma pasta para executar a configuração da sua aplicação. No caso, eu criei uma pasta chamada **cafeteria.com**:
+Passo 2 - Abra a pasta **etc/nginx/site-available** e crie uma pasta para executar a configuração da sua aplicação. No caso, eu criei um arquivo chamado **cafeteria.com**:
 ```
 #Abrir a pasta
 cd /etc/nginx/sites-available
 
 #Criar a pasta
 sudo nano cafeteria.com
+```
+
+Passo 3 - Informe as seguintes configurações no arquivo **cafeteria.com**:
+```
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /home/lucas/Documentos/IFPB/p6_2025.1/gcsi_tsi/cafeteria-web/dist;
+        index index.html;
+
+        server_name _;
+
+        ### Configuração para que redirecionamento entre as rotas funcione:
+        location / {
+                try_files $uri /index.html;
+        }
+}
+
 ```
