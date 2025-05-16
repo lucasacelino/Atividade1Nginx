@@ -29,7 +29,7 @@ npm run build
 Após executar o comando, a pasta dist é criada no diretório da apliação React:
 ![dist](assets/dist.png)
 
-**Etapa 3**
+**Etapa 3 -**
 Aplicação "preparada" para produção, agora é a etapa de hospeder a aplicação no servidor Nginx. Vamos seguir com os seguintes passos:
 - Passo 1 - Copie o path da aplicação junto a pasta `dist`:
 ```
@@ -73,6 +73,11 @@ sudo ln -s /etc/nginx/sites-available/cafeteria.com /etc/nginx/sites-enabled/
 sudo rm default
 ```
 
-**Etapa 3**
-Por fim, para colocar a aplicação pra jogo, entre na pasta `/etc/ngix e e pasta a o arquivo` e abra o arquivo `nginx.conf` e altere a variável **user www-data** para **user<nome_usuario>**:
+**Etapa 4 -**
+Por fim, para colocar a aplicação pra jogo, entre na pasta `/etc/ngix` e abra o arquivo `nginx.conf` e altere a variável **user www-data** para **user<nome_usuario>**:
 ![nginx](assets/nginx.png)
+
+Após realiazar a modificação no arquivo `nginx.conf`, reinicie o Nginx com o seguinte comando abaixo:
+```
+sudo systemctl restart nginx
+```
