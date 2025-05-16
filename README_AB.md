@@ -12,6 +12,7 @@ Primeiramente, é necessário ter o Nginx instalado na sua máquina. Caso não t
 ```
 sudo apt update
 ```
+
 - Passo 2 - instale o Nginx
 ```
 sudo apt install nginx
@@ -28,3 +29,17 @@ npm run build
 Após executar o comando, a pasta dist é criada no diretório da apliação React:
 ![dist](assets/dist.png)
 
+**Etapa 3**
+Aplicação "preparada" para produção, agora é a etapa de hospeder a aplicação no servidor Nginx. Vamos seguir com os seguintes passos:
+Passo 1 - Copie o path da aplicação junto a pasta `dist`:
+```
+/home/lucas/Documentos/IFPB/p6_2025.1/gcsi_tsi/cafeteria-web/dist
+```
+Passo 2 - Abra a pasta `*etc/nginx/site-available*` e crie uma pasta para executar a configuração da sua aplicação. No caso, eu criei uma pasta chamada *cafeteria.com*:
+```
+#Abrir a pasta
+cd /etc/nginx/sites-available
+
+#Criar a pasta
+sudo nano cafeteria.com
+```
