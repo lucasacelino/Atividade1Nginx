@@ -68,7 +68,11 @@ server {
 sudo ln -s /etc/nginx/sites-available/cafeteria.com /etc/nginx/sites-enabled/
 ```
 
-Passo 5 - Apague os arquivos `default` que vem por padrão nas duas pastas: `sites-availables` e `sites-enabled`, Digite o seguinte comando:
+- Passo 5 - Apague os arquivos `default` que vem por padrão nas duas pastas: `sites-availables` e `sites-enabled`, Digite o seguinte comando:
 ```
 sudo rm default
 ```
+
+**Etapa 3**
+Por fim, para colocar a aplicação pra jogo, entre na pasta `/etc/ngix e e pasta a o arquivo` e abra o arquivo `nginx.conf` e altere a variável **user www-data** para **user<nome_usuario>**:
+![nginx](assets/nginx.png)
