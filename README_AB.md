@@ -31,20 +31,20 @@ Após executar o comando, a pasta dist é criada no diretório da apliação Rea
 
 **Etapa 3**
 Aplicação "preparada" para produção, agora é a etapa de hospeder a aplicação no servidor Nginx. Vamos seguir com os seguintes passos:
-Passo 1 - Copie o path da aplicação junto a pasta `dist`:
+- Passo 1 - Copie o path da aplicação junto a pasta `dist`:
 ```
 /home/lucas/Documentos/IFPB/p6_2025.1/gcsi_tsi/cafeteria-web/dist
 ```
-Passo 2 - Abra a pasta **etc/nginx/site-available** e crie uma pasta para executar a configuração da sua aplicação. No caso, eu criei um arquivo chamado **cafeteria.com**:
+- Passo 2 - Abra a pasta **etc/nginx/site-available** e crie uma pasta para executar a configuração da sua aplicação. No caso, eu criei um arquivo chamado **cafeteria.com**:
 ```
 #Abrir a pasta
 cd /etc/nginx/sites-available
 
-#Criar a pasta
+#Criar o arquivo
 sudo nano cafeteria.com
 ```
 
-Passo 3 - Informe as seguintes configurações no arquivo **cafeteria.com**:
+- Passo 3 - Informe as seguintes configurações no arquivo **cafeteria.com**:
 ```
 server {
         listen 80;
@@ -61,4 +61,14 @@ server {
         }
 }
 
+```
+
+- Passo 4 - Agora com a configuração da aplicação já pronta, é necessário realizar a "linkagem" da aplicação para ser colocada no "ar". Para fazer isso, referencia a `sites-available/cafeteria.com` a `site/enabled`, desse modo, o Nginx carrega as aplicações que estão em `site/enabled`. Digite o seguinte comando:
+```
+sudo ln -s /etc/nginx/sites-available/cafeteria.com /etc/nginx/sites-enabled/
+```
+
+Passo 5 - Apague os arquivos `default` que vem por padrão nas duas pastas: `sites-availables` e `sites-enabled`, Digite o seguinte comando:
+```
+sudo rm default
 ```
