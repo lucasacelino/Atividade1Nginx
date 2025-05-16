@@ -13,4 +13,18 @@ Primeiramente, é necessário ter o Nginx instalado na sua máquina. Caso não t
 sudo apt update
 ```
 - Passo 2 - instale o Nginx
-`sudo apt install nginx`
+```
+sudo apt install nginx
+```
+**Etapa 2**
+Com o Nginx já instalado, escolha ou crie um projeto em React, para hospedar em um servidor Nginx. Seu projeto deverá ter rotas, para safisfazer o propósito da atividade. Para isso, O React tem uma biblioteca específica para a manipulação de rotas, o [React Router DOM](https://reactrouter.com/home)
+
+Caso o seu projeto esteja com todas as especiicações, Abra-o em uma IDE e digite o seguinte comando abaixo: 
+```
+npm run build
+```
+> O `npm run build` cria uma versão da sua apliacação pronta para a produção.
+
+Após executar o comando, a pasta dist é criada no diretório da apliação React:
+![dist](assets/dist.png)
+
