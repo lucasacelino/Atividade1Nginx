@@ -81,3 +81,6 @@ Após realiazar a modificação no arquivo `nginx.conf`, reinicie o Nginx com o 
 ```
 sudo systemctl restart nginx
 ```
+
+Se todos os comandos foram feitos corretamente, abra o navegador e digite **localhost**, certamente sua aplicação irá abrir. A aplicação está hospedade em um sevidor Nginx.
+![appInBrowser](assets/aplication.png)
