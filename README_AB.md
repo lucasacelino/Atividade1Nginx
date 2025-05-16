@@ -35,7 +35,7 @@ Passo 1 - Copie o path da aplicação junto a pasta `dist`:
 ```
 /home/lucas/Documentos/IFPB/p6_2025.1/gcsi_tsi/cafeteria-web/dist
 ```
-Passo 2 - Abra a pasta `*etc/nginx/site-available*` e crie uma pasta para executar a configuração da sua aplicação. No caso, eu criei uma pasta chamada *cafeteria.com*:
+Passo 2 - Abra a pasta `**etc/nginx/site-available**` e crie uma pasta para executar a configuração da sua aplicação. No caso, eu criei uma pasta chamada **cafeteria.com**:
 ```
 #Abrir a pasta
 cd /etc/nginx/sites-available
