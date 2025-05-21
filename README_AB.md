@@ -13,4 +13,4 @@ Abra a sua aplicação em sua IDE de preferência. Logo após, abra o terminal e
 ```
 ab -n 1000 -c 100 http://localohost/
 ```
-> ![alt text](image.png) O localhost é a url da sua aplicação que está hospedada no Nginx
+> ![alt text](image-1.png) O localhost é a url da sua aplicação que está hospedada no Nginx
