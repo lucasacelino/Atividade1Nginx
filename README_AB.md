@@ -58,4 +58,10 @@ Percentage of the requests served within a certain time (ms)
  100%     20 (longest request)
 ```
 
-Como podemos observar, o teste de carga foi feito na aplicação que está hospedada em um servidor nginx = `Server Software: nginx/1.24.0`. Todas as 1000 requisições foram feitas em `0.124` segundos, menos de 1 segundo. 
+Como podemos observar, o teste de carga foi feito na aplicação que está hospedada em um servidor nginx - `Server Software: nginx/1.24.0`. Todas as 1000 requisições foram feitas em - `0.124` segundos, menos de 1 segundo. Nenhuma requisiçõ falhou - `Failed requests: 0`. Cada requisição levou em média 12 ms para ser processada, se caso fossem feitas executadas de forma serial(uma por uma) - `Time per request: 12.440 [ms] (mean)`. A maioria das requisições foram executadas entre 11 e 13 ms - 
+```
+50%  11
+66%  12
+75%  13
+80%  13
+```
