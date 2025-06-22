@@ -65,3 +65,4 @@ Como podemos observar, o teste de carga foi feito na aplicação que está hospe
 75%  13
 80%  13
 ```
+A requisição mais lenta demorou 20 ms - `100% 20 (longest request)`
