@@ -21,4 +21,39 @@ ab -n 1000 -c 100 http://localohost/
 
 `-c`: número de requisições concorrentes que serão feitas na aplicação, ou seja, ao mesmo tempo. No comando acima serão feitas 100 concorrentes.
 
-Após a execução do comando, os seguintes dados do teste e carga são mostrados abaixo.
+**Após a execução do comando, os seguintes dados do teste e carga são mostrados abaixo:**
+
+```
+Server Software:        nginx/1.24.0
+Server Hostname:        localhost
+Server Port:            80
+
+Concurrency Level:      100
+Time taken for tests:   0.124 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      626000 bytes
+HTML transferred:       384000 bytes
+Requests per second:    8038.65 [#/sec] (mean)
+Time per request:       12.440 [ms] (mean)
+Time per request:       0.124 [ms] (mean, across all concurrent requests)
+Transfer rate:          4914.25 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    5   1.2      5       9
+Processing:     3    7   2.3      6      15
+Waiting:        0    5   2.0      4      12
+Total:          7   12   2.0     11      20
+
+Percentage of the requests served within a certain time (ms)
+  50%     11
+  66%     12
+  75%     13
+  80%     13
+  90%     14
+  95%     16
+  98%     17
+  99%     19
+ 100%     20 (longest request)
+```
