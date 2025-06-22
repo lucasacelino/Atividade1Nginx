@@ -57,3 +57,5 @@ Percentage of the requests served within a certain time (ms)
   99%     19
  100%     20 (longest request)
 ```
+
+Como podemos observar, o teste de carga foi feito na aplicação que está hospedada em um servidor nginx = `Server Software: nginx/1.24.0`. Todas as 1000 requisições foram feitas em `0.124` segundos, menos de 1 segundo. 
